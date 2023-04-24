@@ -7,9 +7,9 @@ import Loader from 'components/Loader/Loader';
 
 class ImageGallery extends Component {
   static propTypes = {
-    imageName: PropTypes.string.isRequired,
-    getModalContent: PropTypes.func.isRequired,
-    openModal: PropTypes.func.isRequired,
+    imageName: PropTypes.string,
+    getModalContent: PropTypes.func,
+    openModal: PropTypes.func,
   };
   state = {
     fetchImages: [],
