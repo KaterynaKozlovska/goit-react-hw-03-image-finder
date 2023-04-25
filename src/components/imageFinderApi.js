@@ -1,4 +1,4 @@
-const API_KEY = '19216489-5c3816338c51dfbca2dca2232';
+const API_KEY = '35732068-86247d7683f9f768af69bf612';
 const BASE_URL = 'https://pixabay.com/api';
 
 export default async function imageFinderApi(name, page) {
