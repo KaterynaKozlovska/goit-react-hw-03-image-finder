@@ -14,6 +14,13 @@ class Searchbar extends Component {
   handleNameChange = event => {
     this.setState({ imageName: event.currentTarget.value.toLowerCase() });
   };
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    this.props.onSubmit(this.state.imageName);
+    this.setState({ imageName: '' });
+  };
   render() {
     const { imageName } = this.state;
     return (
