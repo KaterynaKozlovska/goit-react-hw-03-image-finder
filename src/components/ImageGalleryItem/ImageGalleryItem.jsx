@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ImageGalleryItem = ({
   imageUrl,
   imageTag,
-  largeImageURL,
+  largeimageurl,
   getItemContent,
   id,
 }) => {
@@ -14,8 +14,8 @@ const ImageGalleryItem = ({
         className={css.ImageGalleryItem__image}
         src={imageUrl}
         alt={imageTag}
-        largeImageURL={largeImageURL}
-        onClick={() => getItemContent(largeImageURL, imageTag)}
+        largeimageurl={largeimageurl}
+        onClick={() => getItemContent(largeimageurl, imageTag)}
         id={id}
       />
     </li>
@@ -25,7 +25,7 @@ const ImageGalleryItem = ({
 ImageGalleryItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   imageTag: PropTypes.string.isRequired,
-  largeImageURL: PropTypes.string.isRequired,
+  largeimageurl: PropTypes.string,
   id: PropTypes.number.isRequired,
   getItemContent: PropTypes.func.isRequired,
 };

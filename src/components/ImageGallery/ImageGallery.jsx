@@ -93,9 +93,9 @@ class ImageGallery extends Component {
     }
   };
 
-  getItemContent = (largeImageURL, tags) => {
+  getItemContent = (largeimageurl, tags) => {
     const modalContent = {
-      largeImageURL,
+      largeimageurl,
       tags,
     };
 
@@ -110,12 +110,12 @@ class ImageGallery extends Component {
         {fetchImages.length > 0 && (
           <ul className={css.ImageGallery} onClick={this.openModal}>
             {fetchImages.map(
-              ({ id, tags, webformatURL, largeImageURL }, item) => (
+              ({ id, tags, webformatURL, largeimageurl }, item) => (
                 <ImageGalleryItem
                   key={item}
                   imageUrl={webformatURL}
                   imageTag={tags}
-                  largeImageURL={largeImageURL}
+                  largeimageurl={largeimageurl}
                   getItemContent={this.getItemContent}
                   id={id}
                 />

@@ -12,7 +12,6 @@ const Loader = () => {
         wrapperStyle
         wrapperClass
       />
-      ;
     </div>
   );
 };
