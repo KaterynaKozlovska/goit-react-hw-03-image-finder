@@ -4,6 +4,7 @@ import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import PropTypes from 'prop-types';
 import ButtonLoadMore from 'components/Button/Button';
 import Loader from 'components/Loader/Loader';
+import imageFinderApi from 'components/imageFinderApi';
 
 class ImageGallery extends Component {
   static propTypes = {
@@ -48,16 +49,11 @@ class ImageGallery extends Component {
 
   getImages = async () => {
     const { page, fetchImages } = this.state;
-    const name = this.props.imageName;
-
-    const API_KEY = '19216489-5c3816338c51dfbca2dca2232';
-    const BASE_URL = 'https://pixabay.com/api';
+    const query = this.props.imageName;
 
     this.setState({ isLoading: true });
 
-    const data = await fetch(
-      `${BASE_URL}/?q=${name}&page=${page}&key=${API_KEY}&image_type=photo&orientation=horizontal&per_page=12`
-    );
+    const data = await imageFinderApi(query, page);
 
     try {
       if (data.total === 0) {
