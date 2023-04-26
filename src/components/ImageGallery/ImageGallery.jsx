@@ -8,9 +8,9 @@ import imageFinderApi from 'components/imageFinderApi';
 
 class ImageGallery extends Component {
   static propTypes = {
-    imageName: PropTypes.string,
-    getModalContent: PropTypes.func,
-    openModal: PropTypes.func,
+    imageName: PropTypes.string.isRequired,
+    getModalContent: PropTypes.func.isRequired,
+    openModal: PropTypes.func.isRequired,
   };
   state = {
     fetchImages: [],

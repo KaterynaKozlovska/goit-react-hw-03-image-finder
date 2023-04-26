@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 class Searchbar extends Component {
   static propTypes = {
-    onSubmit: PropTypes.func,
+    onSubmit: PropTypes.func.isRequired,
   };
 
   state = {

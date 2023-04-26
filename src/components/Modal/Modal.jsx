@@ -10,7 +10,7 @@ class Modal extends Component {
     onClose: PropTypes.func.isRequired,
     data: PropTypes.shape({
       tags: PropTypes.string.isRequired,
-      largeimageurl: PropTypes.string,
+      largeimageurl: PropTypes.string.isRequired,
     }),
   };
   componentDidMount() {

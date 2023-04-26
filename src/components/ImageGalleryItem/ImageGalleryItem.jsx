@@ -25,7 +25,7 @@ const ImageGalleryItem = ({
 ImageGalleryItem.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   imageTag: PropTypes.string.isRequired,
-  largeimageurl: PropTypes.string,
+  largeimageurl: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   getItemContent: PropTypes.func.isRequired,
 };
